@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+$transitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+$fontFamily: 'Roboto, sans-serif';
+$defaultTextColor: #212121;
+$highlightColor: #2196f3;
+$whiteColor: #ffffff;
+$headerBorderColor: #ececec;
+$darkBackground: #2f303a;
+$lightBackground: #e5e5e5;
+$lightTextColor: #757575;
+$blackColor: #000000;
+$lightBackground2: #f5f4fa;
+$svgIconColor: #afb1b8;
+$overlayBackground: rgba(47, 48, 58, 0.8);
+$footerContacts: rgba(255, 255, 255, 0.6);
+$footerSocialMediaBackground: rgba(255, 255, 255, 0.1);
+$overlayAnimationBackground: rgba(33, 150, 243, 0.9);
+$menuHoverTransparent: rgba(33, 150, 243, 0.4);
+$darkening: rgba(0, 0, 0, 0.5);
+$backgroundImageLinearGradient: rgba(47, 48, 58, 0.4);
+$boxShadow1: rgba(0, 0, 0, 0.15);
+$boxShadow2: rgba(0, 0, 0, 0.12);
+$boxShadow3: rgba(0, 0, 0, 0.14);
+$boxShadow4: rgba(0, 0, 0, 0.2);
+$boxShadow5: rgba(0, 0, 0, 0.1);
+$boxShadow6: rgba(0, 0, 0, 0.08);
+$boxShadow7: rgba(0, 0, 0, 0.06);
+$boxShadow8: rgba(0, 0, 0, 0.16);
+$newsletterInput: rgba(255, 255, 255, 0.3);
+$fieldBorder: rgba(33, 33, 33, 0.2);

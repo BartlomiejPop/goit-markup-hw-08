@@ -1,0 +1,84 @@
+.team {
+    background-color: $lightBackground2;
+
+    &__quote {
+        padding-top: 94px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $defaultTextColor;
+    }
+
+    &__members {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    &__member {
+        display: inline-flex;
+        background-color: $whiteColor;
+        box-shadow: 0px 1px 3px $boxShadow2, 0px 1px 1px $boxShadow3, 0px 2px 1px $boxShadow4;
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__member:first-child:nth-child(n + 2) {
+        margin-left: 30px;
+    }
+
+    &__member-card-name {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+    }
+
+    &__member-card-description {
+        padding-bottom: 30px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        color: $lightTextColor;
+    }
+
+    &__member-card {
+        padding-bottom: 30px;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        fill: $svgIconColor;
+        border-radius: 50%;
+    }
+
+    &__link:focus,
+    &__link:hover {
+        transition-duration: 250ms;
+        transition-timing-function: $transitionTimingFunction;
+        cursor: pointer;
+        fill: $whiteColor;
+        background-color: $highlightColor;
+    }
+}

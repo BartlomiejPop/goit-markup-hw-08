@@ -1,0 +1,104 @@
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+
+    &-filters {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    &-filters__item:nth-child(n + 2) {
+        margin-left: 8px;
+    }
+
+    &-filters__btn {
+        padding: 6px 22px;
+        width: 121px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        letter-spacing: 0.03em;
+        font-family: 'Roboto';
+        border-radius: 4px;
+        border: none;
+        background-color: $lightBackground2;
+    }
+
+    &-filters__btn:hover,
+    &-filters__btn:focus {
+        transition-duration: 250ms;
+        transition-timing-function: $transitionTimingFunction;
+        background-color: $highlightColor;
+        color: $whiteColor;
+        cursor: pointer;
+        box-shadow: 0px 3px 1px $boxShadow5, 0px 1px 2px $boxShadow6, 0px 2px 2px $boxShadow2;
+    }
+
+    &__item:hover,
+    &__item:focus {
+        transition-duration: 250ms;
+        transition-timing-function: $transitionTimingFunction;
+        cursor: pointer;
+        box-shadow: 0px 1px 1px $boxShadow2, 0px 4px 4px $boxShadow7, 1px 4px 6px $boxShadow8;
+    }
+
+    &__item:hover .box__overlay-animated,
+    &__item:focus .box__overlay-animated {
+        transform: translateY(-100%);
+    }
+
+    &__figure {
+        background: $whiteColor;
+    }
+}
+
+.box__overlay-animated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 49px 45px 49px 24px;
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    transform: translateY(0);
+    color: $whiteColor;
+    background-color: $overlayAnimationBackground;
+    transition: transform 250ms $transitionTimingFunction;
+}
+
+.box__paragraph {
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+}
+
+.figcaption {
+    border-right: 1px solid $lightBackground;
+    border-bottom: 1px solid $lightBackground;
+    border-left: 1px solid $lightBackground;
+
+    &__work-title {
+        display: flex;
+        padding: 20px 24px 20px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    }
+
+    &__work-type {
+        display: flex;
+        padding: 0 24px 20px;
+        margin-top: 4px;
+        font-size: 16px;
+        line-height: 1.9;
+        letter-spacing: 0.03em;
+        color: $lightTextColor;
+    }
+}

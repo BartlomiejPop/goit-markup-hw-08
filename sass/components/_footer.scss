@@ -1,0 +1,134 @@
+.footer {
+    padding: 60px 0;
+    background-color: $darkBackground;
+
+    &-contacts {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        font-style: normal;
+        color: $whiteColor;
+    }
+
+    &-contacts__link {
+        margin-top: 9px;
+        display: block;
+        width: fit-content;
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        color: $footerContacts;
+    }
+
+    &-social-media {
+        display: flex;
+        gap: 10px;
+    }
+
+    &-logo__logo-second-color {
+        color: $whiteColor;
+    }
+
+    &-contacts__item--no-decoration {
+        text-decoration: none;
+    }
+
+    &-contacts__link:hover,
+    &-contacts__link:focus {
+        transition-duration: 250ms;
+        transition-timing-function: $transitionTimingFunction;
+        color: $highlightColor;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+    }
+}
+
+.media {
+    margin-left: 70px;
+    padding-top: 12px;
+
+    &__quote {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1, 15;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+}
+
+.logo__studio--white {
+    color: $whiteColor;
+}
+
+.social-media--margin-top {
+    margin-top: 20px;
+}
+
+.social-media__link--footer {
+    width: 44px;
+    height: 44px;
+    fill: $whiteColor;
+    background-color: $footerSocialMediaBackground;
+    border-radius: 50%;
+}
+
+.newsletter {
+    margin-left: 78px;
+
+    &__quote {
+        padding-top: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.15;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $whiteColor;
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        margin-top: 20px;
+        gap: 12px;
+    }
+
+    &__input {
+        padding-left: 16px;
+        width: 358px;
+        height: 50px;
+        border: 1px solid $newsletterInput;
+        filter: drop-shadow(0px 4px 4px $boxShadow1);
+        border-radius: 4px;
+        color: $whiteColor;
+        background-color: $darkBackground;
+    }
+
+    &-btn {
+        padding: 10px 76px 10px 42px;
+        width: 200px;
+        height: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        color: $whiteColor;
+        background-color: $highlightColor;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 13px;
+        left: 518px;
+        fill: $whiteColor;
+    }
+}
