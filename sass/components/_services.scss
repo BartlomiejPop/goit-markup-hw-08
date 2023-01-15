@@ -1,20 +1,17 @@
-.section {
-    &__services {
-        list-style: none;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.2;
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: $defaultTextColor;
-    }
-
-    &--negative-margin-top {
-        margin-top: -94px;
-    }
+.services {
+    visibility: hidden;
+    list-style: none;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $defaultTextColor;
+    margin-top: -94px;
 }
 
-.services-images {
+.services__images {
+    visibility: hidden;
     margin-top: 50px;
     display: inline-flex;
     justify-content: space-between;
@@ -26,6 +23,7 @@
 }
 
 .box {
+    visibility: hidden;
     position: relative;
     overflow: hidden;
 

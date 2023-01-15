@@ -8,17 +8,34 @@ body {
     color: $defaultTextColor;
 }
 
-img,
+img {
+    vertical-align: middle;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 svg {
     vertical-align: middle;
 }
 
 .container {
-    width: 1200px;
+    min-width: 320px;
     padding: 0 15px;
-    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 738px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
 }
 
 .section {
-    padding: 94px 0;
+    padding: 60px 0;
 }
