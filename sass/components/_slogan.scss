@@ -8,6 +8,7 @@
         url(../images/overlay-mobile-phone.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: cover;
     text-align: center;
     background-color: $darkBackground;
 
@@ -28,6 +29,8 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $whiteColor;
+        @mixin desktop {
+        }
     }
 
     &__btn {
@@ -43,5 +46,70 @@
         background-color: $highlightColor;
         border: none;
         letter-spacing: 0.06em;
+        @include desktop {
+            margin-bottom: 200px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .slogan {
+        background-image: linear-gradient(
+                $backgroundImageLinearGradient,
+                $backgroundImageLinearGradient
+            ),
+            url(../images/overlay.jpg);
+        @media (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            .slogan {
+                background-image: url(../images/overlay@2x.jpg);
+            }
+        }
+
+        &__main-quote {
+            margin: 0 170px 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .slogan {
+        list-style: none;
+        background-image: linear-gradient(
+                $backgroundImageLinearGradient,
+                $backgroundImageLinearGradient
+            ),
+            url(../images/overlay.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        text-align: center;
+        background-color: $darkBackground;
+
+        &__main-quote {
+            margin: 106px 252px 30px;
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.25;
+            text-align: center;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: $whiteColor;
+        }
+
+        &-btn {
+            padding: 10px 41px 10px 42px;
+            margin-bottom: 106px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.875;
+            box-shadow: 0px 4px 4px $boxShadow1;
+            border-radius: 4px;
+            color: $whiteColor;
+            background-color: $highlightColor;
+            border: none;
+            letter-spacing: 0.06em;
+        }
     }
 }

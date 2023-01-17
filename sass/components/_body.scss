@@ -9,7 +9,6 @@ body {
 }
 
 img {
-    vertical-align: middle;
     display: block;
     max-width: 100%;
     height: auto;
@@ -20,22 +19,43 @@ svg {
 }
 
 .container {
-    min-width: 320px;
+    margin: 0 auto;
+    max-width: 480px;
     padding: 0 15px;
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-        width: 738px;
+    @include tablet {
+        padding: 0;
     }
-}
-
-@media screen and (min-width: 1200px) {
-    .container {
-        width: 1200px;
+    &--services {
+        margin: 0 auto;
+        padding: 0 15px;
+        @include desktop {
+            max-width: 1200px;
+        }
     }
 }
 
 .section {
     padding: 60px 0;
+    @include desktop {
+        padding: 94px 0;
+    }
+
+    &--services {
+        @include desktop {
+            display: block;
+            padding: 94px 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 738px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
 }

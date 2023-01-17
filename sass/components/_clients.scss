@@ -6,6 +6,9 @@
         text-align: center;
         letter-spacing: 0.03em;
         color: $defaultTextColor;
+        @include desktop {
+            padding-top: 0px;
+        }
     }
 
     &__list {
@@ -13,10 +16,8 @@
         gap: 30px;
         list-style: none;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-    }
-
-    &__list-item {
     }
 
     &__list-link {
@@ -49,9 +50,13 @@
     }
 }
 
-@media screen and (max-width: 480px) {
-    .clients__list {
-        display: flex;
-        justify-content: center;
+@media screen and (min-width: 1200px) {
+    .clients {
+        &__list {
+        }
+
+        &__list-link {
+            width: 170px;
+        }
     }
 }
