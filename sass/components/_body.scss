@@ -49,6 +49,7 @@ svg {
     }
 
     &--services {
+        padding: 0;
         @include desktop {
             display: block;
             padding: 94px 0;

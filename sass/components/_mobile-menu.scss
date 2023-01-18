@@ -1,5 +1,6 @@
 .menu-container {
     position: fixed;
+    padding: 48px 40px;
     inset: 0;
     background-color: $whiteColor;
     transform: translateX(100%);
@@ -13,7 +14,10 @@
 }
 
 .mobile-menu {
-    padding: 48px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .mobile-navigation {
@@ -47,11 +51,14 @@
         }
     }
 }
-
+.mobile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
 .mobile-contacts {
-    margin-top: 302px;
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 32px;
     list-style: none;
 
@@ -72,12 +79,17 @@
     }
 }
 
+.menu-toggle--close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
 .mobile-social-media {
     margin-top: 64px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-
     &__item {
         border-right: 1px solid rgba(33, 33, 33, 0.2);
         padding: 0 10px;

@@ -5,6 +5,9 @@
     gap: 30px;
     list-style: none;
     @include tablet {
+        justify-content: flex-start;
+    }
+    @include desktop {
     }
 
     &-filters {
@@ -14,6 +17,9 @@
         display: flex;
         flex-wrap: wrap;
         list-style: none;
+        @include tablet {
+            justify-content: center;
+        }
     }
 
     &-filters__btn {
@@ -48,8 +54,8 @@
         box-shadow: 0px 1px 1px $boxShadow2, 0px 4px 4px $boxShadow7, 1px 4px 6px $boxShadow8;
     }
 
-    &__item:hover .box__overlay-animated,
-    &__item:focus .box__overlay-animated {
+    &__item:hover .portfolio-box__overlay-animated,
+    &__item:focus .portfolio-box__overlay-animated {
         transform: translateY(-100%);
     }
 
@@ -59,22 +65,39 @@
 
     &__item {
         max-width: 450px;
-        width: 100%;
+
+        @include tablet {
+            max-width: 354px;
+        }
+        @include desktop {
+            max-width: 370px;
+        }
     }
 }
-.box {
+.portfolio-box {
+    position: relative;
+    overflow: hidden;
+    @include tablet {
+    }
     &__overlay-animated {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 49px 45px 49px 24px;
         position: absolute;
-        width: 370px;
+        width: 450px;
         height: 294px;
         transform: translateY(0);
         color: $whiteColor;
         background-color: $overlayAnimationBackground;
         transition: transform 250ms $transitionTimingFunction;
+        @include tablet {
+            padding: 49px 24px;
+            width: 354px;
+        }
+        @include desktop {
+            width: 370px;
+        }
     }
 
     &__paragraph {
@@ -87,11 +110,19 @@
 .figcaption {
     display: flex;
     flex-wrap: wrap;
-
     width: 100%;
     border-right: 1px solid $lightBackground;
     border-bottom: 1px solid $lightBackground;
     border-left: 1px solid $lightBackground;
+    &--higher {
+        min-height: auto;
+        @include tablet {
+            min-height: 146px;
+        }
+        @include desktop {
+            min-height: auto;
+        }
+    }
 
     &__work-title {
         width: 100%;
