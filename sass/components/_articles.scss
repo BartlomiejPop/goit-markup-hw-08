@@ -1,5 +1,4 @@
 .articles {
-    margin-bottom: 60px;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -7,7 +6,12 @@
     background-color: $whiteColor;
     @include desktop {
         margin-bottom: 0px;
-        margin-left: 15px;
+    }
+    @include desktop {
+        display: inline-flex;
+        justify-content: space-between;
+        list-style: none;
+        background-color: $whiteColor;
     }
 
     &__item {
@@ -15,7 +19,15 @@
         justify-content: center;
         flex-wrap: wrap;
         @include tablet {
+            width: 354px;
             justify-content: flex-start;
+        }
+        @include desktop {
+            width: 270px;
+
+            &:nth-child(n + 2) {
+                margin-left: 30px;
+            }
         }
     }
 
@@ -45,53 +57,5 @@
         line-height: 1.7;
         letter-spacing: 0.03em;
         color: $lightTextColor;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .articles {
-        &__item {
-            width: 354px;
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .articles {
-        display: inline-flex;
-        justify-content: space-between;
-        list-style: none;
-        background-color: $whiteColor;
-
-        &__item {
-            width: 270px;
-        }
-
-        &__item:nth-child(n + 2) {
-            margin-left: 30px;
-        }
-
-        &__icon {
-            padding: auto;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            background-color: $lightBackground2;
-        }
-
-        &__title {
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1.2;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-        }
-
-        &__paragraph {
-            font-size: 14px;
-            line-height: 1.7;
-            letter-spacing: 0.03em;
-            color: $lightTextColor;
-        }
     }
 }

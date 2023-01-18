@@ -1,11 +1,142 @@
 .header {
+    .container {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
     padding: 10px 0;
     border-bottom: 1px solid $headerBorderColor;
     background-color: $whiteColor;
+    @include tablet {
+        padding: 20px 0 20px;
+    }
+    @include desktop {
+        padding: 20px 0 20px;
+    }
+
+    &__navigation {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            margin-left: 83px;
+        }
+    }
+
+    &__navigation-list {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            list-style: none;
+        }
+        @include desktop {
+            gap: 46px;
+        }
+    }
+
+    &__link {
+        @include tablet {
+            position: relative;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.2;
+            color: $defaultTextColor;
+        }
+        &:focus,
+        &:hover {
+            transition-duration: 250ms;
+            transition-timing-function: $transitionTimingFunction;
+            color: $highlightColor;
+        }
+        &:hover::after,
+        &:focus::after {
+            content: ' ';
+            position: absolute;
+            top: 45px;
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $menuHoverTransparent;
+        }
+        &--active-link {
+            color: $highlightColor;
+        }
+        &--active-link:not(:hover)::after,
+        &--active-link:not(:focus)::after {
+            content: ' ';
+            position: absolute;
+            top: 45px;
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $highlightColor;
+        }
+    }
+    &__contacts {
+        margin-left: 101px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        @include desktop {
+            margin-right: 12px;
+            margin-left: 335px;
+            gap: 30px;
+        }
+    }
+    &__contacts-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__contact-link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.2px;
+        letter-spacing: 0.02em;
+        fill: currentColor;
+        color: $lightTextColor;
+        @include desktop {
+            font-size: 14px;
+            line-height: 1.2px;
+        }
+    }
+
+    &__contact-link:hover,
+    &__contact-link:focus {
+        transition-duration: 250ms;
+        transition-timing-function: $transitionTimingFunction;
+        color: $highlightColor;
+    }
+
+    &__icon {
+        width: 14px;
+        height: 10px;
+        margin-right: 8px;
+        @include desktop {
+            margin-right: 10px;
+        }
+
+        &--smartphone {
+            width: 10px;
+            height: 14px;
+            margin-right: 8px;
+        }
+    }
 }
 
 .hide-on-mobiles {
     display: none;
+    @include tablet {
+        display: flex;
+    }
 }
 
 .menu-toggle {
@@ -23,6 +154,9 @@
         cursor: pointer;
         transition-duration: 250ms;
         transition-timing-function: $transitionTimingFunction;
+    }
+    @include tablet {
+        display: none;
     }
 }
 
@@ -43,148 +177,5 @@
     }
     @include desktop {
         font-size: 26px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .hide-on-mobiles {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .header {
-        padding: 20px 0 20px;
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &__navigation {
-            display: flex;
-            align-items: center;
-            margin-left: 83px;
-        }
-
-        &__navigation-list {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            list-style: none;
-        }
-
-        &__link {
-            position: relative;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.2;
-            color: $defaultTextColor;
-        }
-
-        &__link:focus,
-        &__link:hover {
-            transition-duration: 250ms;
-            transition-timing-function: $transitionTimingFunction;
-            color: $highlightColor;
-        }
-
-        &__link:hover::after,
-        &__link:focus::after {
-            content: ' ';
-            position: absolute;
-            top: 44px;
-            display: block;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            background-color: $menuHoverTransparent;
-        }
-
-        &__link--active-link {
-            color: $highlightColor;
-        }
-
-        &__link--active-link:not(:hover)::after,
-        &__link--active-link:not(:focus)::after {
-            content: ' ';
-            position: absolute;
-            top: 44px;
-            display: block;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            background-color: $highlightColor;
-        }
-
-        &__contacts {
-            margin-left: 101px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            list-style: none;
-        }
-
-        &__contacts-item {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        &__contact-link {
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 1.2px;
-            letter-spacing: 0.02em;
-            fill: currentColor;
-            color: $lightTextColor;
-        }
-
-        &__contact-link:hover,
-        &__contact-link:focus {
-            transition-duration: 250ms;
-            transition-timing-function: $transitionTimingFunction;
-            color: $highlightColor;
-        }
-
-        &__icon {
-            width: 14px;
-            height: 10px;
-            margin-right: 8px;
-
-            &--smartphone {
-                width: 10px;
-                height: 14px;
-                margin-right: 8px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .header {
-        padding: 20px 0 20px;
-
-        .container {
-        }
-
-        &__contacts {
-            gap: 30px;
-            margin-left: 335px;
-        }
-
-        &__contact-link {
-            font-size: 14px;
-            line-height: 1.2px;
-        }
-
-        &__icon {
-            margin-right: 10px;
-        }
     }
 }

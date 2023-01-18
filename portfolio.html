@@ -19,42 +19,64 @@
     <body>
         <header class="header">
             <div class="container">
-                <nav class="header__navigation">
-                    <a class="logo" href="index.html"
-                        >Web<span class="logo__studio--black">Studio</span></a
+                <a class="logo" href="index.html"
+                    >Web<span class="logo__studio--black">Studio</span></a
+                >
+                <button
+                    class="menu-toggle js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                     >
-                    <ul class="header__navigation-list">
-                        <li class="header__item">
-                            <a class="header__link" href="index.html">Agencja</a>
-                        </li>
-                        <li class="header__item">
-                            <a class="header__link header__link--active-link" href="portfolio.html">
-                                Portfolio</a
+                        <path
+                            fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"
+                        ></path>
+                    </svg>
+                </button>
+                <div class="hide-on-mobiles">
+                    <nav class="header__navigation">
+                        <ul class="header__navigation-list">
+                            <li class="header__item">
+                                <a class="header__link header__link--active-link" href="index.html"
+                                    >Agencja</a
+                                >
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="portfolio.html"> Portfolio</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#">Kontakt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="header__contacts">
+                        <li class="header__contacts-item">
+                            <a class="header__contact-link" href="mailto:info@devstudio.com">
+                                <svg class="header__icon" width="16" height="12">
+                                    <use href="images/icons.svg#icon-envelop"></use>
+                                </svg>
+
+                                info@devstudio.com</a
                             >
                         </li>
-                        <li class="header__item">
-                            <a class="header__link" href="#">Kontakt</a>
+                        <li class="header__contacts-item">
+                            <a class="header__contact-link" href="tel:++48111111111">
+                                <svg class="header__icon--smartphone" width="10" height="16">
+                                    <use href="images/icons.svg#icon-smartphone2"></use>
+                                </svg>
+                                +48 111 111 111</a
+                            >
                         </li>
                     </ul>
-                </nav>
-                <ul class="header__contacts">
-                    <li>
-                        <a class="header__contact-link" href="mailto:info@devstudio.com">
-                            <svg class="header__icon" width="16" height="12">
-                                <use href="images/icons.svg#icon-envelop"></use>
-                            </svg>
-                            info@devstudio.com</a
-                        >
-                    </li>
-                    <li>
-                        <a class="header__contact-link" href="tel:++48111111111">
-                            <svg class="header__icon" width="10" height="16">
-                                <use href="images/icons.svg#icon-smartphone2"></use>
-                            </svg>
-                            +48 111 111 111</a
-                        >
-                    </li>
-                </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -83,6 +105,7 @@
                                 <div class="box">
                                     <img
                                         src="images/technocrack.jpg"
+                                        srcset="images/technocrack@2x.jpg"
                                         alt="technocrack"
                                         width="370"
                                         height="294"
@@ -107,6 +130,7 @@
                                 <div class="box">
                                     <img
                                         src="images/grafika-new-orlean-vs-golden-star.jpg"
+                                        srcset="images/grafika-new-orlean-vs-golden-star@2x.jpg"
                                         alt="Grafika New Orlean vs Golden Star"
                                         width="370"
                                         height="294"
@@ -133,6 +157,7 @@
                                 <div class="box">
                                     <img
                                         src="images/restauracja-seafood.jpg"
+                                        srcset="images/restauracja-seafood@2x.png"
                                         alt="restauracja seafood"
                                         width="370"
                                         height="294"
@@ -158,6 +183,7 @@
                                 <div class="box">
                                     <img
                                         src="images/projekt-prime.jpg"
+                                        srcset="images/projekt-prime@2x.png"
                                         alt="projekt prime"
                                         width="370"
                                         height="294"
@@ -182,6 +208,7 @@
                                 <div class="box">
                                     <img
                                         src="images/projekt-boxes.jpg"
+                                        srcset="images/projekt-boxes@2x.png"
                                         alt="Projekt boxes"
                                         width="370"
                                         height="294"
@@ -309,22 +336,26 @@
         <footer class="footer">
             <div class="container">
                 <ul class="footer__wrapper">
-                    <li>
-                        <span class="footer-logo"
-                            ><a class="logo" href="index.html"
+                    <li class="footer__item">
+                        <span class="footer__logo"
+                            ><a class="logo--footer" href="index.html"
                                 >Web<span class="logo__studio--white">Studio</span></a
                             ></span
                         >
                         <address class="footer-contacts">
-                            <span>m. Warszawa, Aleje Jerozolimskie 21</span>
-
-                            <a class="footer-contacts__link" href="mailto:info@devstudio.com"
-                                >info@devstudio.com</a
+                            <span class="footer-contacts__adress"
+                                >m. Warszawa, Aleje Jerozolimskie 21</span
                             >
+
+                            <a class="footer-contacts__link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+
                             <a
                                 class="footer-contacts__link footer-contacts__item--no-decoration"
                                 href="tel:+48111111111"
-                                >+48 111 111 111</a
+                            >
+                                +48 111 111 111</a
                             >
                         </address>
                     </li>
@@ -361,6 +392,7 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <div class="newsletter">
                             <h3 class="newsletter__quote" for="newsletter-signup">
@@ -371,7 +403,7 @@
                                 class="newsletter__form"
                                 autocomplete="off"
                             >
-                                <label>
+                                <label class="newsletter__label">
                                     <input
                                         class="newsletter__input"
                                         name="newsletter-input"
@@ -379,15 +411,82 @@
                                         placeholder="e-mail"
                                     />
                                 </label>
-                                <button class="newsletter-btn" type="submit">Zapisz się</button>
-                                <svg class="newsletter__icon" width="24" height="24">
-                                    <use href="images/icons.svg#icon-icon-send"></use>
-                                </svg>
+                                <div class="newsletter__item">
+                                    <button class="newsletter-btn" type="submit">Zapisz się</button>
+                                    <svg class="newsletter__icon" width="24" height="24">
+                                        <use href="images/icons.svg#icon-icon-send"></use>
+                                    </svg>
+                                </div>
                             </form>
                         </div>
                     </li>
                 </ul>
             </div>
         </footer>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+                <svg
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
+
+            <ul class="mobile-menu">
+                <ul class="mobile-navigation">
+                    <li class="mobile-navigation__item">
+                        <a href="index.html" class="mobile-navigation__link" class="link"
+                            >Agencja</a
+                        >
+                    </li>
+                    <li class="mobile-navigation__item">
+                        <a href="portfolio.html" class="mobile-navigation__link--highlight"
+                            >Portfolio</a
+                        >
+                    </li>
+                    <li class="mobile-navigation__item">
+                        <a href="#" class="mobile-navigation__link">Kontakt</a>
+                    </li>
+                </ul>
+                <ul class="mobile-contacts">
+                    <li class="mobile-contacts__item">
+                        <a href="" class="mobile-contacts__link--phone">+48 111 111 111</a>
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <a href="" class="mobile-contacts__link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-social-media">
+                    <li class="mobile-social-media__item">
+                        <a href="" class="mobile-social-media__link">Instagram</a>
+                    </li>
+
+                    <li class="mobile-social-media__item">
+                        <a href="" class="mobile-social-media__link">Twitter</a>
+                    </li>
+                    <li class="mobile-social-media__item">
+                        <a href="" class="mobile-social-media__link">Facebook</a>
+                    </li>
+                    <li class="mobile-social-media__item">
+                        <a href="" class="mobile-social-media__link">Linkedin</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="./js/mobile-menu.js"></script>
     </body>
 </html>

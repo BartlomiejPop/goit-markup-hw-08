@@ -1,19 +1,19 @@
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
     list-style: none;
-
-    &-filters {
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: center;
-        list-style: none;
+    @include tablet {
     }
 
-    &-filters__item:nth-child(n + 2) {
-        margin-left: 8px;
+    &-filters {
+        row-gap: 15px;
+        gap: 8px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
     }
 
     &-filters__btn {
@@ -56,36 +56,49 @@
     &__figure {
         background: $whiteColor;
     }
-}
 
-.box__overlay-animated {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 49px 45px 49px 24px;
-    position: absolute;
-    width: 370px;
-    height: 294px;
-    transform: translateY(0);
-    color: $whiteColor;
-    background-color: $overlayAnimationBackground;
-    transition: transform 250ms $transitionTimingFunction;
+    &__item {
+        max-width: 450px;
+        width: 100%;
+    }
 }
+.box {
+    width: 450px;
+    display: block;
+    &__overlay-animated {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 49px 45px 49px 24px;
+        position: absolute;
+        width: 370px;
+        height: 294px;
+        transform: translateY(0);
+        color: $whiteColor;
+        background-color: $overlayAnimationBackground;
+        transition: transform 250ms $transitionTimingFunction;
+    }
 
-.box__paragraph {
-    font-size: 18px;
-    line-height: 156%;
-    letter-spacing: 0.03em;
+    &__paragraph {
+        font-size: 18px;
+        line-height: 156%;
+        letter-spacing: 0.03em;
+    }
 }
 
 .figcaption {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
     border-right: 1px solid $lightBackground;
     border-bottom: 1px solid $lightBackground;
     border-left: 1px solid $lightBackground;
 
     &__work-title {
+        width: 100%;
         display: flex;
-        padding: 20px 24px 20px;
+        padding: 20px 24px 4px;
         font-weight: 700;
         font-size: 18px;
         line-height: 2;
@@ -93,6 +106,7 @@
     }
 
     &__work-type {
+        width: 100%;
         display: flex;
         padding: 0 24px 20px;
         margin-top: 4px;

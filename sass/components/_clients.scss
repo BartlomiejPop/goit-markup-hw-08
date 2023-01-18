@@ -28,6 +28,9 @@
         height: 92px;
         border: 1px solid $svgIconColor;
         border-radius: 4px;
+        @include desktop {
+            width: 170px;
+        }
     }
 
     &__list-icon {
@@ -47,16 +50,5 @@
         transition-duration: 250ms;
         transition-timing-function: $transitionTimingFunction;
         fill: $highlightColor;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .clients {
-        &__list {
-        }
-
-        &__list-link {
-            width: 170px;
-        }
     }
 }

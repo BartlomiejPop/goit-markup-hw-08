@@ -23,12 +23,20 @@ svg {
     max-width: 480px;
     padding: 0 15px;
     @include tablet {
+        max-width: 738px;
         padding: 0;
     }
+    @include desktop {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
     &--services {
+        display: none;
         margin: 0 auto;
         padding: 0 15px;
         @include desktop {
+            display: block;
             max-width: 1200px;
         }
     }
@@ -45,17 +53,5 @@ svg {
             display: block;
             padding: 94px 0;
         }
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 738px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
     }
 }

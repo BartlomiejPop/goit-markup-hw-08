@@ -26,7 +26,7 @@
         width: 528px;
     }
 
-    &-close-button {
+    &__close-button {
         position: absolute;
         top: 8px;
         right: 8px;
@@ -38,13 +38,13 @@
         cursor: pointer;
     }
 
-    &-icon {
+    &__icon {
         position: absolute;
         top: 15px;
         left: 15px;
     }
 
-    &-button {
+    &__button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -64,7 +64,7 @@
         border-radius: 4px;
     }
 
-    .field-label,
+    &-form__label,
     &-textarea {
         width: 100%;
         font-size: 12px;
@@ -84,7 +84,7 @@
     position: relative;
     margin-top: 10px;
 
-    &-label__input:focus {
+    &__label-input:focus {
         transition-duration: 250ms;
         transition-timing-function: $transitionTimingFunction;
         cursor: pointer;
@@ -92,22 +92,22 @@
         outline: none;
     }
 
-    &-label__input:focus + .modal-icon {
+    &__label-input:focus + .modal__icon {
         fill: $highlightColor;
         transition-duration: 250ms;
         transition-timing-function: $transitionTimingFunction;
         outline: none;
     }
 
-    &-label,
-    .modal-textarea {
+    &-label {
         font-size: 12px;
         line-height: 1.18;
         letter-spacing: 0.01em;
+        outline: none;
         color: $lightTextColor;
     }
 
-    &-label__input {
+    &__label-input {
         margin-top: 4px;
         padding: 9.5px 15px 9.5px 42px;
         width: 100%;
